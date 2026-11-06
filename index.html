@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>vote validatior</h2>
+    <label for="">Name:</label>
+    <input type="text" id="Name" placeholder="enter ur Name">
+    <label for="">Age:</label>
+    <input type="number" id="Age" placeholder="enter ur Age">
+    <button onclick="vote()">submit</button>
+    <p id="res"></p>
+    <script>
+        function vote(){
+            var Name = document.getElementById("Name").value;
+            var Age = document.getElementById("Age").value;
+            var res = document.getElementById("res");
+            if(Age>=18){
+                //alert("your r eligible");
+                res.innerHTML =Name+ "you r eligible"
+            }else{
+                //alert("you r not eligible😭");
+                res.innerHTML = Name+ "you r not eligible😭"
+            }
+        }
+    </script>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            width: 250px;
+            height: 150px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    
+
+    
+</body>
+</html>
